@@ -1,0 +1,5 @@
+customer_id,parent_customer_id,bu,customer_name
+C001,PC01,BU_A,Alpha Co
+C002,PC02,BU_A,Beta Co
+C003,PC99,BU_A,Legacy Gamma
+C007,,BU_A,Gamma Alt
