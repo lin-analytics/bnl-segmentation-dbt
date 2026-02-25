@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_sales__product_customer_month
+    description: "This table contains the aggregated sales data by product, customer, and month."
+    columns:
+      - name: product_id
+        description: "The unique identifier for the product."
+        tests:
+          - not_null
+      - name: analysis_customer_id
+        description: "The unique identifier for the customer."
+        tests:
+          - not_null
+      - name: month
+        description: "The month of the sales data in YYYY-MM-dd format."
+        tests: 
+          - not_null
+      - name: bu
+        description: "The business unit for the given product, customer, and month."
+        tests:
+          - not_null
+    
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - product_id
+            - analysis_customer_id
+            - month
+            - bu
