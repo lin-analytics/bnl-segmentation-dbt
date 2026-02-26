@@ -28,3 +28,10 @@ models:
             - analysis_customer_id
             - month
             - bu
+  - name: int_bnl_classification
+    columns:
+      - name: bnl_bucket
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Base Gainer', 'Base Drainer', 'Lost', 'New']
