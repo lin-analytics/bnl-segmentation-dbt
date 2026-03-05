@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dim_customer
+    columns:
+      - name: analysis_customer_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_product
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_calendar_month
+    columns:
+      - name: month
+        tests:
+          - not_null
+          - unique
