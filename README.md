@@ -3,22 +3,6 @@
 **dbt + DuckDB Analytics Engineering Project**
 
 
----
-# Project Structure
-
-revops-bnl-dbt
-├── README.md
-├── LICENSE
-└── bnl_dbt
-    ├── models
-    │   ├── staging
-    │   ├── intermediate
-    │   └── marts
-    ├── seeds
-    └── tests
-
----
-
 # 1. Project Overview
 
 This project implements a **BNL (Base–New–Lost) customer lifecycle model** using **dbt** and **DuckDB**.
