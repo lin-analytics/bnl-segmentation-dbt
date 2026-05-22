@@ -1,11 +1,10 @@
-# Customer Analytics Model
+# Customer Segmentation dbt Project
 
-**dbt + DuckDB Analytics Engineering Project**
+**dbt + BigQuery Analytics Engineering Project**
 
 
 # 1. Project Overview
-
-This project implements a **customer segmentation model** using **dbt** and **DuckDB**.
+This project implements a **customer segmentation model** using **dbt** and **Google BigQuery**.
 
 The purpose of this model is to provide a clear and consistent view of customer purchase behavior, lifecycle trends, and revenue movement across product categories and customer segments.
 
@@ -278,37 +277,26 @@ This documents how analytical outputs are consumed by stakeholders.
 
 ---
 
-# 10. Running the Project Locally
+# 10. Deployment
 
-### Install dbt
+This project is deployed in **dbt Cloud** with **BigQuery** as the data warehouse.
 
-```
-pip install dbt-duckdb
-```
+The pipeline includes:
 
----
+- Loading seed CSV files into BigQuery using `dbt seed`
+- Building staging, intermediate, and mart models using `dbt run`
+- Validating model quality using `dbt test`
+- Running the full pipeline through a scheduled dbt Cloud job using `dbt build`
 
-### Load seed data
+The project was originally developed locally and then migrated to BigQuery. During the migration, warehouse-specific SQL was updated for BigQuery compatibility, including data types, date functions, interval logic, and dimensional grain validation.
 
-```
-dbt seed
-```
+### Production Job
 
----
+A scheduled dbt Cloud job runs the customer segmentation pipeline using:
 
-### Build models
+```bash
+dbt build
 
-```
-dbt run
-```
-
----
-
-### Execute tests
-
-```
-dbt test
-```
 
 ---
 
