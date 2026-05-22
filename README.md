@@ -296,7 +296,7 @@ A scheduled dbt Cloud job runs the customer segmentation pipeline using:
 
 ```bash
 dbt build
-
+```
 
 ---
 
