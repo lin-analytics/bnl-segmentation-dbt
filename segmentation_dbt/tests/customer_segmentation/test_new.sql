@@ -9,5 +9,5 @@ where bf.logic_type = 'standard'
   and bf.customer_segmentation_bucket_final = 'New'
   and not (
       w.sales_recent_30d > 0
-      and w.sales_piror_180d = 0
+      and w.sales_prior_180d = 0
   )

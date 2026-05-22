@@ -3,6 +3,6 @@ with source_data as (
 )
 
 select 
-    cast(customer_id as varchar) as customer_id,
-    cast(customer_name as varchar) as customer_name,
+    cast(customer_id as string) as customer_id,
+    cast(customer_name as string) as customer_name,
 from source_data

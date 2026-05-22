@@ -17,7 +17,7 @@ bu2 as (
         product_id,
         analysis_customer_id,
         customer_segmentation_bucket_bu2 as customer_segmentation_bucket_raw,
-        cast(null as double) as yoy_variance_amt,
+        cast(null as float64) as yoy_variance_amt,
         'bu2_9_18' as logic_type
     from {{ref('int_customer_segmentation__90d_360d')}}
 ),

@@ -5,7 +5,7 @@ with resolved_sales as (
 
 final as (
     select
-        date_trunc('month', invoice_date) as month,
+        date_trunc(invoice_date, month) as month,
         bu,
         product_id,
         analysis_customer_id,

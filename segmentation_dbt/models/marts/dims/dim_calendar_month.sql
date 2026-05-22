@@ -7,10 +7,13 @@ with months as (
 final as (
     select
         month,
-        year(month) as year,
-        month(month) as month_number,
-        strftime(month, '%Y-%m') as year_month,
-        case when month(month) <= 6 then 'H1' else 'H2' end as half_year
+        extract(year from month) as year,
+        extract(month from month) as month_number,
+        format_date('%Y-%m', month) as year_month,
+        case
+            when extract(month from month) <= 6 then 'H1'
+            else 'H2'
+        end as half_year
     from months
 )
 
