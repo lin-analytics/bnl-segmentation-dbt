@@ -312,7 +312,7 @@ dbt docs serve
 # 11. Technology Stack
 
 * **dbt Core**
-* **DuckDB**
+* **BigQuery**
 * **SQL**
 * Dimensional data modeling
 * Analytics engineering best practices
@@ -326,7 +326,6 @@ Potential extensions include:
 * parameterized lifecycle rule configuration
 * slowly changing customer dimensions
 * automated reconciliation checks
-* cloud warehouse deployment (BigQuery / Snowflake)
 * semantic layer integration
 
 
